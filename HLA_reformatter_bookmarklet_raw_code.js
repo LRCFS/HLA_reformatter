@@ -1,3 +1,4 @@
+//Encoded into bookmarklet with https://mrcoles.com/bookmarklet/
 //Help function to take file contents and download in browser - file named after time and date (e.g. 01-01-2018_09-00-11.fasta)
 function createFileAndDownload(fileContent) {
   //Create empty element for download to initate
