@@ -26,7 +26,7 @@ Run the command as such:
 
     perl hla_clean.pl --in example.txt --out out.fasta
 
-#Bookmarklet
+## Bookmarklet
 
 Optionally you can run some similar code from your browser by using our HLA Reformatter Bookmarklet.
 
@@ -34,7 +34,7 @@ To use this version you simply navigate to the EMBL Immuno Polymophism website a
 
 You can then click the Bookmarklet in your browser where it will process the page and automatically download a file in .fasta format.
 
-## To use
+### To use
 
 1. Copy the following code to your clipboard
 
