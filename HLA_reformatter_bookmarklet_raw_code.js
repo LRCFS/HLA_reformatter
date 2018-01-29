@@ -1,6 +1,5 @@
-//Encoded into bookmarklet with https://mrcoles.com/bookmarklet/
-$(document).ready(function() {
-
+//Encoded into bookmarklet with https://mrcoles.com/bookmarklet/ (removed "noConlift" mode)
+function doHLAReformatting() {
 	//Get the code from the output on https://www.ebi.ac.uk/cgi-bin/ipd/imgt/hla/align.cgi
 	var fullCode = $(".normal").html();
 	//Remove spaces
@@ -51,10 +50,9 @@ $(document).ready(function() {
 	}
 
 	createFileAndDownload(output);
+}
 
-});
-
-//Help function to take file contents and download in browser - file named after time and date (e.g. 01-01-2018_09-00-11.fasta)
+//Helper function to take file contents and download in browser - file named after time and date (e.g. 01-01-2018_09-00-11.fasta)
 function createFileAndDownload(fileContent) {
 	//Create empty element for download to initate
 	var element = document.createElement('a');
