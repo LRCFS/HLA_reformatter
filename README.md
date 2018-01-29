@@ -24,6 +24,6 @@ Get help with running the script by:
 
 Run the command as such:
 
-    perl hla_clean.pl --in hla_align.txt --out out.fasta
+    perl hla_clean.pl --in example.txt --out out.fasta
 
 
