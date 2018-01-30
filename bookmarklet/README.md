@@ -25,3 +25,15 @@ javascript:(function()%7Bfunction%20callback()%7B(function(%24)%7Bvar%20jQuery%3
 6. On the results page click the "HLA Reformatter" bookmark in your browser.
 
 After a short period of time it should download your formatted data.
+
+### How it works
+
+The above JS code that you're adding to your bookmarks effectively does three things:
+
+1. Loads jQuery
+2. Loads the hla_clean.js file from github (https://github.com/LRCFS/HLA_reformatter/blob/master/bookmarklet/hla_clean.js)
+3. Runs the main() function in hla_clean.js
+
+The hla_clean.js does all the work, scraping the page for data and reformatting it into a usable .fasta file without any wrapped data.
+
+To see it working, or check for errors, open the debug console while running the script from your browser.
