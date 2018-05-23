@@ -3,8 +3,7 @@
 	"version": "1.0",
 	"description": "An extension for downloading .FASTA formatted data from the EMBL Immuno Polymorphism Database alignment tool (https://www.ebi.ac.uk/ipd/imgt/hla/align.html)",
 	
-	"permissions": ["activeTab", "declarativeContent", "storage"],
-	"content_security_policy": "script-src 'self' https://ajax.googleapis.com https://cdn.rawgit.com; object-src 'self'",
+	"permissions": ["activeTab"],
 
 	"browser_action": {
 		"default_popup": "popup.html",
@@ -17,8 +16,8 @@
 	},
 	
 	"content_scripts": [ {
-		"css": ["inject.css"],
-		"js": [ "jquery.min.js", "hla_clean.js", "inject.js" ],
+		"css": ["hla_fasta_reformatter.css"],
+		"js": ["jquery.min.js", "hla_fasta_reformatter.js"],
 		"matches": [ "https://www.ebi.ac.uk/cgi-bin/ipd/imgt/hla/align.cgi"]
 	}],
 

@@ -1,6 +1,26 @@
-console.log("HLA Reformatter File Loaded v2");
+console.log("HLA Reformatter File Loaded");
 
-function hlaCleanMain() {
+$("<div id='hlaReformatterReady'><h3>HLA FASTA Reformatter Extension</h3><p>This page has now fully loaded. Click the button below to download the data in a FASTA format.</p><p><button id='btnInjectedHlaReformatter'>Download FASTA Data</button><div id='loadingText' style='display: none'>FASTA file being generated. Please wait...</div><div class='loader' style='display: none'></div></p></div>'").insertAfter("#breadcrumb");
+
+$('#btnInjectedHlaReformatter').click(function(){
+	$.ajax({
+		beforeSend: function(result){
+			$("#loadingText").css("display", "inline-block");
+			$(".loader").css("display", "inline-block");
+			$("#btnInjectedHlaReformatter").css("display", "none");
+		},
+		success: function(result){
+			hlaReformatterMain();
+		},
+		complete: function(result){
+			$("#loadingText").css("display", "none");
+			$(".loader").css("display", "none");
+			$("#btnInjectedHlaReformatter").css("display", "block");
+		}
+	});
+});
+
+function hlaReformatterMain() {
 	//Get the code from the output on https://www.ebi.ac.uk/cgi-bin/ipd/imgt/hla/align.cgi
 	var fullCode = $(".normal").html();
 	if(fullCode == null){
