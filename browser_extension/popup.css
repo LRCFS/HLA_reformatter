@@ -1,0 +1,44 @@
+body{
+	width: 420px;
+	font-family: "Open Sans",arial,sans-serif;
+	font-size: 0.8em;
+}
+
+a:link,
+a:visited{
+	color: #555;
+	text-decoration: underline;
+}
+
+a:hover,
+a:active{
+	color: #555;
+	text-decoration: none;
+}
+
+#logo, h1{
+	text-align: center;
+}
+
+ol{
+	list-style: none;
+}
+
+	ol li{
+		margin: 0 10px 10px -10px;
+		
+	}
+	
+		ol .complete:before {
+			content: '\2713';
+			color: #2DB200;
+			padding-right: 10px;
+			font-weight: bold;
+		}
+
+		ol li:before{
+			content: '\26A0';
+			color: #FF2626;
+			padding-right: 10px;
+			font-weight: bold;
+		}

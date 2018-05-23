@@ -1,0 +1,36 @@
+#hlaReformatterReady{
+	background-color: #DFFFBF;
+	border: 1px solid #00B200;
+	width: 50%;
+    margin: 20px;
+    padding: 20px;
+}
+
+button:disabled,
+button[disabled]{
+	border: 2px solid #b9b9b9;
+    background-color: #e2e2e2;
+    color: #666666;
+}
+
+#loadingText{
+	display: inline-block;
+    padding: 0px 20px 0px 10px;
+}
+
+.loader {
+	display: inline-block;
+	margin-bottom: -5px;
+	border: 5px solid #FFFFFF;
+	border-radius: 50%;
+	border-top: 5px solid #3498db;
+	width: 20px;
+	height: 20px;
+	-webkit-animation: spin 2s linear infinite; /* Safari */
+	animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}

@@ -1,0 +1,33 @@
+{
+	"name": "HLA FASTA Reformatter Extentsion",
+	"version": "1.0",
+	"description": "An extension for downloading .FASTA formatted data from the EMBL Immuno Polymorphism Database alignment tool (https://www.ebi.ac.uk/ipd/imgt/hla/align.html)",
+	
+	"permissions": ["activeTab", "declarativeContent", "storage"],
+	"content_security_policy": "script-src 'self' https://ajax.googleapis.com https://cdn.rawgit.com; object-src 'self'",
+
+	"browser_action": {
+		"default_popup": "popup.html",
+		"default_icon": {
+			"16": "images/hla_reformatter_logo_16.png",
+			"32": "images/hla_reformatter_logo_32.png",
+			"48": "images/hla_reformatter_logo_48.png",
+			"128": "images/hla_reformatter_logo_128.png"
+		}
+	},
+	
+	"content_scripts": [ {
+		"css": ["inject.css"],
+		"js": [ "jquery.min.js", "hla_clean.js", "inject.js" ],
+		"matches": [ "https://www.ebi.ac.uk/cgi-bin/ipd/imgt/hla/align.cgi"]
+	}],
+
+	"icons": {
+		"16": "images/hla_reformatter_logo_16.png",
+		"32": "images/hla_reformatter_logo_32.png",
+		"48": "images/hla_reformatter_logo_48.png",
+		"128": "images/hla_reformatter_logo_128.png"
+	},
+	
+	"manifest_version": 2
+}
