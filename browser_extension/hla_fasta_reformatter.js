@@ -1,20 +1,28 @@
+//Log message to console when this file is loaded
 console.log("HLA Reformatter File Loaded");
 
+//When file has loaded the page will have finished loading so inject the download button
 $("<div id='hlaReformatterReady'><h3>HLA FASTA Reformatter Extension</h3><p>This page has now fully loaded. Click the button below to download the data in a FASTA format.</p><p><button id='btnInjectedHlaReformatter'>Download FASTA Data</button><div id='loadingText' style='display: none'>FASTA file being generated. Please wait...</div><div class='loader' style='display: none'></div></p></div>'").insertAfter("#breadcrumb");
 
+//When you click the download button
 $('#btnInjectedHlaReformatter').click(function(){
 	$.ajax({
 		beforeSend: function(result){
+			//Display loading text and spinner
 			$("#loadingText").css("display", "inline-block");
 			$(".loader").css("display", "inline-block");
+			//Hide download button
 			$("#btnInjectedHlaReformatter").css("display", "none");
 		},
 		success: function(result){
+			//Run main parser
 			hlaReformatterMain();
 		},
 		complete: function(result){
+			//Once complete hide loading text and spinner
 			$("#loadingText").css("display", "none");
 			$(".loader").css("display", "none");
+			//Display download button again
 			$("#btnInjectedHlaReformatter").css("display", "block");
 		}
 	});

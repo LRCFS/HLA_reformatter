@@ -1,7 +1,8 @@
 {
 	"name": "HLA FASTA Reformatter Extentsion",
-	"version": "1.0",
-	"description": "An extension for downloading .FASTA formatted data from the EMBL Immuno Polymorphism Database alignment tool (https://www.ebi.ac.uk/ipd/imgt/hla/align.html)",
+	"short_name": "HLA Reformat",
+	"version": "0.0.0.1",
+	"description": "An extension for downloading .FASTA formatted data from the EMBL Immuno Polymorphism Database alignment tool.",
 	
 	"permissions": ["activeTab"],
 
