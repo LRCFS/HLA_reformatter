@@ -33,13 +33,13 @@ function main() {
 			{
 				//If it does, then add it on
 				hashTable[lineName] = hashTable[lineName] + lineSeq;
-				console.log("addingto: '" + lineName + "' seq now: '" + hashTable[lineName] +"'")
+				//console.log("addingto: '" + lineName + "' seq now: '" + hashTable[lineName] +"'")
 			}
 			else
 			{
 				//If it doesn't add as new item
 				hashTable[lineName] = lineSeq;
-				console.log("new: '" + lineName + "' seq: '" + lineSeq +"'")
+				//console.log("new: '" + lineName + "' seq: '" + lineSeq +"'")
 			}
 		}
 	  }
