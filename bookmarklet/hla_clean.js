@@ -6,8 +6,8 @@ function main() {
 		alert("Cannot find output from alignment on page.\n\nPlease ensure you are using the EMBL-EBI IPD-IMGT/HLA Sequence Alignment Tool found at:\n\nhttps://www.ebi.ac.uk/ipd/imgt/hla/align.html")
 		return;
 	}
-	//Remove spaces
-	var codeNoSpaces = fullCode.replace(/&nbsp;/gi, " ");
+	//Remove spaces and hyperlinks
+	var codeNoSpaces = fullCode.replace(/&nbsp;|<\/?a(?:(?= )[^>]*)?>/gmi, " ");
 	//put lines from code into an array
 	var lines = codeNoSpaces.split("<br>");
 	var hashTable = new Object();
